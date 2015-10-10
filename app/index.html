@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="phonecatApp">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,24 +7,17 @@
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/app.css">
   <script src="bower_components/angular/angular.js"></script>
+  <script src="js/controllers.js"></script>
 
 </head>
-<body>
+<body ng-controller="PhoneListCtrl">
     <ul>
-      <li>
-        <span>Nexus S</span>
+      <li ng-repeat="phone in phones">
+        <span>{{ phone.name }}</span>
         <p>
-          Fast just got faster with Nexus S
+          {{ phone.snippet }}
         </p>
-      </li>
-      <li>
-        <span>Motorola XOOM with Wi-Fi</span>
-        <p>
-          The Next, Next Generation tablet.
-        </p>
-      </li>
-    </ul>
-
-    <p>Totoal number of phones: 2</p>
+      </li>      
+    </ul>    
 </body>
 </html>
