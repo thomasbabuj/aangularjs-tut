@@ -15,4 +15,6 @@ phonecatApp.controller('PhoneListCtrl', function($scope){
 			'snippet' : 'The Next, Next Generation tablet.'
 		},
 	];
+
+	$scope.name = "Thomas !!";
 });
